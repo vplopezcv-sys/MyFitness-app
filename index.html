@@ -47,28 +47,28 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 .btn-danger{background:rgba(255,107,53,.12);color:var(--ac2);border:1.5px solid rgba(255,107,53,.2);border-radius:12px;padding:11px 16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;-webkit-appearance:none;display:block;text-align:center;width:100%}
 
 /* ── TOPBAR ── */
-.topbar{padding:calc(var(--st)+12px) 20px 12px;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:1px solid var(--bd);flex-shrink:0}
+.topbar{padding-top:calc(env(safe-area-inset-top,0px) + 12px);padding-right:24px;padding-bottom:12px;padding-left:28px;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:1px solid var(--bd);flex-shrink:0}
 .tb-left{display:flex;flex-direction:column}
 .tb-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--ac)}
 .tb-sub{font-size:10px;color:var(--t2);margin-top:0px}
 .ico-btn{background:var(--s2);border:none;border-radius:10px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--tx);flex-shrink:0}
 
-/* ── BOTTOM NAV ── */
-.bnav{display:flex;background:var(--sf);border-top:1px solid var(--bd);padding-bottom:var(--sb);flex-shrink:0}
-.nitem{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:9px 0;cursor:pointer;border:none;background:none;color:var(--t3);font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.3px;text-transform:uppercase;transition:color .15s;gap:4px}
+/* ── BOTTOM NAV ── FIX 1: Increased contrast on nav items */
+.bnav{display:flex;background:var(--sf);border-top:1px solid #333;padding-bottom:var(--sb);flex-shrink:0}
+.nitem{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:9px 0;cursor:pointer;border:none;background:none;color:#666;font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.3px;text-transform:uppercase;transition:color .15s;gap:4px}
 .nitem.on{color:var(--ac)}
 .nitem svg{width:19px;height:19px}
 
 /* ── HOME ── */
-.home-hd{padding:calc(var(--st)+14px) 20px 10px;flex-shrink:0}
+.home-hd{padding-top:calc(env(safe-area-inset-top,0px) + 14px);padding-right:24px;padding-bottom:10px;padding-left:28px;flex-shrink:0}
 .home-gr{font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:1.5px}
 .home-nr{display:flex;align-items:center;justify-content:space-between;margin-top:2px}
 .home-nm{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--tx);letter-spacing:2px;line-height:1}
 .streak{display:inline-flex;align-items:center;gap:4px;background:var(--s2);border-radius:20px;padding:4px 10px;font-size:11px;color:var(--ac)}
-.sec-lbl{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);padding:0 20px;margin-bottom:10px;margin-top:18px}
+.sec-lbl{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);padding:0 24px 0 28px;margin-bottom:10px;margin-top:18px}
 
 /* Muscle grid */
-.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:0 20px}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:0 24px 0 28px}
 .mcard{background:var(--s2);border-radius:14px;padding:18px 15px;cursor:pointer;border:1.5px solid transparent;transition:border-color .2s,transform .12s;position:relative;overflow:hidden}
 .mcard:active{transform:scale(.96)}
 .mcard.full{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:16px 18px}
@@ -79,13 +79,13 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 .mcard::after{content:'';position:absolute;top:-18px;right:-18px;width:60px;height:60px;background:radial-gradient(circle,rgba(232,255,71,.07) 0%,transparent 70%)}
 
 /* Last workout + Templates */
-.lw-card{margin:0 20px;background:var(--s2);border-radius:13px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.lw-card{margin:0 24px 0 28px;background:var(--s2);border-radius:13px;padding:12px 14px;display:flex;align-items:center;gap:10px}
 .lw-ico{width:36px;height:36px;background:var(--ac);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .lw-nm{font-weight:600;font-size:13px}
 .lw-mt{font-size:10px;color:var(--t2);margin-top:1px}
 
 /* Template cards */
-.tpl-card{background:var(--s2);border-radius:13px;padding:12px 14px;margin:0 20px 8px;display:flex;align-items:center;gap:10px;cursor:pointer;border:1.5px solid transparent;transition:border-color .15s}
+.tpl-card{background:var(--s2);border-radius:13px;padding:12px 14px;margin:0 24px 8px 28px;display:flex;align-items:center;gap:10px;cursor:pointer;border:1.5px solid transparent;transition:border-color .15s}
 .tpl-card:active{border-color:var(--ac)}
 .tpl-ico{width:36px;height:36px;background:var(--s3);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .tpl-nm{font-weight:600;font-size:13px}
@@ -112,11 +112,11 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 .exitem.selected .ex-check{display:flex}
 
 /* ── SESSION ── */
-.sess-bar{padding:calc(var(--st)+10px) 20px 10px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;border-bottom:1px solid var(--bd);background:var(--bg)}
+.sess-bar{padding:calc(var(--st)+10px) 24px 10px 28px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;border-bottom:1px solid var(--bd);background:var(--bg)}
 .sess-timer{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--ac);letter-spacing:3px}
 .sess-tl{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:1.5px}
 .sess-wn{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1.5px;margin-top:1px}
-.aex{background:var(--s2);margin:10px 20px 0;border-radius:13px;padding:14px}
+.aex{background:var(--s2);margin:10px max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));border-radius:13px;padding:14px}
 .ae-hd{display:flex;justify-content:space-between;align-items:flex-start}
 .ae-nm{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:1.5px;line-height:1.1}
 .ae-tp{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:1px;margin-top:1px}
@@ -165,8 +165,8 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 .dsep{width:1px;background:var(--bd);margin:14px 0 0;flex-shrink:0}
 
 /* ── HISTORY ── */
-.hdate{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);margin:14px 20px 7px}
-.hcard{background:var(--s2);border-radius:13px;padding:13px 15px;margin:0 20px 9px;cursor:pointer;border:1.5px solid transparent;transition:border-color .15s}
+.hdate{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);margin:14px 24px 7px 28px}
+.hcard{background:var(--s2);border-radius:13px;padding:13px 15px;margin:0 24px 9px 28px;cursor:pointer;border:1.5px solid transparent;transition:border-color .15s}
 .hcard:active{border-color:var(--ac)}
 .hc-top{display:flex;justify-content:space-between;align-items:flex-start}
 .hc-type{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:1px;margin-top:2px}
@@ -177,9 +177,9 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 .hstat-l{font-size:9px;color:var(--t2);text-transform:uppercase;letter-spacing:.5px}
 
 /* ── STATS ── */
-.scard{background:var(--s2);border-radius:13px;padding:14px;margin:0 20px 11px}
+.scard{background:var(--s2);border-radius:13px;padding:14px;margin:0 24px 11px 28px}
 .sc-ttl{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);margin-bottom:11px}
-.srow2{display:flex;gap:9px;padding:0 20px;margin-bottom:11px}
+.srow2{display:flex;gap:9px;padding:0 24px 0 28px;margin-bottom:11px}
 .smini{flex:1;background:var(--s2);border-radius:11px;padding:12px}
 .smini-v{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--tx)}
 .smini-l{font-size:9px;color:var(--t2);text-transform:uppercase;letter-spacing:.5px}
@@ -193,14 +193,14 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 /* ── PROFILE ── */
 .pav{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:30px;color:#000;margin:18px auto 0}
 .pname{text-align:center;font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;margin-top:7px}
-.pstats{display:flex;margin:12px 20px 0;background:var(--s2);border-radius:13px;overflow:hidden}
+.pstats{display:flex;margin:12px 24px 0 28px;background:var(--s2);border-radius:13px;overflow:hidden}
 .pst{flex:1;padding:12px 5px;text-align:center;border-right:1px solid var(--bd)}
 .pst:last-child{border-right:none}
 .pst-v{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--ac)}
 .pst-l{font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--t2);margin-top:1px}
-.psec-ttl{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);margin:14px 20px 9px}
-.wc-wrap{margin:0 20px 10px;background:var(--s2);border-radius:13px;padding:13px;overflow:hidden}
-.wlog{margin:0 20px}
+.psec-ttl{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--t2);margin:14px 24px 9px 28px}
+.wc-wrap{margin:0 24px 10px 28px;background:var(--s2);border-radius:13px;padding:13px;overflow:hidden}
+.wlog{margin:0 24px 0 28px}
 .we{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--bd)}
 .we-dt{font-size:11px;color:var(--t2)}
 .we-wt{font-size:16px;font-weight:600}
@@ -231,13 +231,17 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 .empty-ico{font-size:40px;margin-bottom:10px}
 .empty-ttl{font-size:16px;font-weight:600;color:var(--t3);margin-bottom:5px}
 .empty-sub{font-size:12px;line-height:1.5}
-.exp-row{display:flex;gap:9px;padding:0 20px;margin-bottom:11px}
+.exp-row{display:flex;gap:9px;padding:0 24px 0 28px;margin-bottom:11px}
 .exp-btn{flex:1;background:var(--s2);border:1.5px solid var(--bd);border-radius:11px;padding:11px;color:var(--tx);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px}
 .exp-btn:active{border-color:var(--ac);color:var(--ac)}
 
 /* ── TEMPLATE BUILDER ── */
 .tplb-footer{padding:10px 18px;border-top:1px solid var(--bd);flex-shrink:0;padding-bottom:calc(10px + var(--sb))}
 .sel-count{font-size:12px;color:var(--t2);text-align:center;margin-bottom:8px}
+
+/* ── FIX 3: Developer credit footer ── */
+.dev-credit{text-align:center;padding:18px 24px 8px;font-size:10px;color:var(--t3);letter-spacing:1.5px;text-transform:uppercase}
+.dev-credit span{color:#444}
 </style>
 </head>
 <body>
@@ -255,6 +259,8 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
     <div class="ob-fl"><label class="ob-lbl">Altura (cm)</label><div class="drum-trig" id="dt-ht" onclick="obPick('height')"><span id="dv-ht" class="dt-ph">Seleccionar</span><svg class="dt-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div></div>
     <div class="ob-fl"><label class="ob-lbl">Peso inicial (kg)</label><div class="drum-trig" id="dt-wt" onclick="obPick('weight')"><span id="dv-wt" class="dt-ph">Seleccionar</span><svg class="dt-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div></div>
     <button class="btn-p" style="margin-top:10px" onclick="finishOb()">EMPEZAR →</button>
+    <!-- FIX 3: Developer credit on onboarding screen -->
+    <div class="dev-credit" style="margin-top:24px">Desarrollada por <span style="color:#555">Víctor Pérez López</span></div>
   </div>
 </div>
 
@@ -263,9 +269,9 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 
   <!-- HOME TAB -->
   <div id="tab-home" class="tab-p" style="display:flex;flex-direction:column;flex:1;overflow:hidden">
-    <div class="home-hd">
-      <div class="home-gr">Buenas,</div>
-      <div class="home-nr">
+    <div style="padding-top:calc(env(safe-area-inset-top,0px) + 14px);padding-right:24px;padding-bottom:10px;padding-left:28px;flex-shrink:0">
+      <div style="font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:1.5px">Buenas,</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px">
         <div class="home-nm" id="h-name">Atleta</div>
         <div class="streak" id="h-streak">🔥 0</div>
       </div>
@@ -290,17 +296,21 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
         <div class="mcard" onclick="startW('CARDIO','cardio')"><div class="mc-ico">🏃</div><div class="mc-nm">Cardio</div><div class="mc-sub">Cinta, elíptica…</div></div>
         <div class="mcard" onclick="startW('FULL BODY','fullbody')"><div class="mc-ico">⚡</div><div class="mc-nm">Full Body</div><div class="mc-sub">Todo el cuerpo</div></div>
       </div>
+      <!-- FIX 3: Developer credit at bottom of home scroll -->
+      <div class="dev-credit" style="margin-top:28px">Desarrollada por <span style="color:#555">Víctor Pérez López</span></div>
     </div>
   </div>
 
   <!-- HISTORY TAB -->
   <div id="tab-history" class="tab-p" style="display:none;flex-direction:column;flex:1;overflow:hidden">
+    <!-- FIX 2: topbar already has 20px padding -->
     <div class="topbar"><div class="tb-left"><div class="tb-title">Historial</div><div class="tb-sub">Todos tus entrenos</div></div></div>
     <div class="sa" id="hist-list" style="padding-bottom:calc(14px + var(--sb))"></div>
   </div>
 
   <!-- STATS TAB -->
   <div id="tab-stats" class="tab-p" style="display:none;flex-direction:column;flex:1;overflow:hidden">
+    <!-- FIX 2: topbar already has 20px padding — title no longer clips -->
     <div class="topbar"><div class="tb-left"><div class="tb-title">Estadísticas</div><div class="tb-sub">Tu progreso</div></div></div>
     <div class="sa" id="stats-content" style="padding-bottom:calc(14px + var(--sb))"></div>
   </div>
@@ -314,7 +324,7 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
     <div class="sa" id="profile-content" style="padding-bottom:calc(14px + var(--sb))"></div>
   </div>
 
-  <!-- BOTTOM NAV -->
+  <!-- FIX 1: Bottom nav — color raised from #3a3a3a to #666 for proper contrast -->
   <div class="bnav">
     <button class="nitem on" onclick="switchTab('home')" id="nav-home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Inicio</button>
     <button class="nitem" onclick="switchTab('history')" id="nav-history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Historial</button>
@@ -343,7 +353,10 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 <!-- ═══════════ SESSION ═══════════ -->
 <div id="scr-sess" class="screen" style="flex-direction:column">
   <div class="sess-bar">
-    <div><div class="sess-tl">ENTRENANDO</div><div class="sess-wn" id="sess-name"></div></div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button class="ico-btn" onclick="exitWorkout()" title="Salir sin guardar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div><div class="sess-tl">ENTRENANDO</div><div class="sess-wn" id="sess-name"></div></div>
+    </div>
     <div class="sess-timer" id="sess-timer">00:00</div>
   </div>
   <div class="sa" id="sess-content" style="padding-bottom:8px"></div>
@@ -433,6 +446,36 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--tx);font-famil
 </div>
 <div class="toast" id="toast"></div>
 
+<!-- Exit workout without saving -->
+<div class="mov" id="m-exit">
+  <div class="msh">
+    <div class="mhd" style="border-bottom:none;padding-bottom:8px">
+      <div class="mttl">¿Salir del entrenamiento?</div>
+      <button class="mcls" onclick="closeM('m-exit')">✕</button>
+    </div>
+    <div style="padding:0 20px 20px">
+      <p style="font-size:13px;color:var(--t2);margin-bottom:18px;line-height:1.6">El entrenamiento actual <strong style="color:var(--tx)">no se guardará</strong>. ¿Seguro que quieres salir?</p>
+      <button class="btn-danger" onclick="confirmExitWorkout()" style="margin-bottom:10px;font-size:15px;padding:14px">SALIR SIN GUARDAR</button>
+      <button class="btn-s" onclick="closeM('m-exit')">Seguir entrenando</button>
+    </div>
+  </div>
+</div>
+
+<!-- Delete workout from history -->
+<div class="mov" id="m-delw">
+  <div class="msh">
+    <div class="mhd" style="border-bottom:none;padding-bottom:8px">
+      <div class="mttl">¿Borrar este entreno?</div>
+      <button class="mcls" onclick="closeM('m-delw')">✕</button>
+    </div>
+    <div style="padding:0 20px 20px">
+      <p style="font-size:13px;color:var(--t2);margin-bottom:18px;line-height:1.6">Esta acción <strong style="color:var(--tx)">no se puede deshacer</strong>. El entreno desaparecerá del historial.</p>
+      <button class="btn-danger" onclick="confirmDeleteWorkout()" style="margin-bottom:10px;font-size:15px;padding:14px">BORRAR ENTRENO</button>
+      <button class="btn-s" onclick="closeM('m-delw')">Cancelar</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ════════════════════════════════════
 // STORAGE — auto-save on every write
@@ -484,21 +527,15 @@ const CARDIO_EX = ['Cinta', 'Elíptica', 'Escaleras'];
 
 const DB = {
   'Espalda': [
-    // Jalón / Polea alta
     'Jalón Agarre Ancho (Polea)', 'Jalón Agarre Estrecho (Polea)', 'Jalón Agarre Neutro (Polea)',
     'Jalón con Mancuerna (Unilateral)',
-    // Dominadas
     'Dominadas Libres (Agarre Ancho)', 'Dominadas Libres (Agarre Estrecho)', 'Dominadas Libres (Agarre Neutro)',
     'Dominadas Asistidas (Máquina)', 'Dominadas Asistidas (Goma)',
-    // Remo
     'Remo T', 'Remo con Barra (Prono)', 'Remo con Barra (Supino)',
     'Remo con Mancuerna (Unilateral)', 'Remo en Máquina', 'Remo en Polea Baja',
     'Remo Unilateral Máquina', 'Remo al Pecho (Máquina)',
-    // Pullover
     'Pullover con Mancuerna', 'Pullover en Polea',
-    // Peso muerto
     'Peso Muerto con Barra', 'Peso Muerto Rumano', 'Peso Muerto Sumo',
-    // Espalda inferior
     'Hiperextensiones', 'Buenos Días (Barra)', 'Face Pull',
   ],
   'Bíceps': [
@@ -511,44 +548,30 @@ const DB = {
     'Curl Alterno Cruzado',
   ],
   'Pecho': [
-    // Press plano
     'Press Banca Plano (Barra)', 'Press Banca Plano (Mancuernas)', 'Press Máquina (Pecho)',
-    // Press inclinado
     'Press Inclinado (Barra)', 'Press Inclinado (Mancuernas)', 'Press Inclinado Máquina',
-    // Press declinado
     'Press Declinado (Barra)', 'Press Declinado (Mancuernas)',
-    // Aperturas / Flies
     'Flies con Mancuernas (Plano)', 'Flies con Mancuernas (Inclinado)',
     'Flies en Máquina (Peck Deck)', 'Cruces en Polea (Pecho Polea)',
-    // Fondos
     'Fondos Libres', 'Fondos Asistidos (Máquina)', 'Fondos Asistidos (Goma)',
     'Fondos en Máquina',
   ],
   'Hombros': [
-    // Press
     'Press Militar (Barra)', 'Press Militar (Mancuernas)', 'Press Militar (Máquina)',
     'Press Arnold', 'Press Landmine',
-    // Elevaciones laterales
     'Elevaciones Laterales (Mancuernas)', 'Elevaciones Laterales (Polea)', 'Elevaciones Laterales (Máquina)',
-    // Elevaciones frontales
     'Elevaciones Frontales (Mancuernas)', 'Elevaciones Frontales (Barra)', 'Elevaciones Frontales (Polea)',
-    // Posteriores
     'Reverse Flies (Mancuernas)', 'Reverse Flies (Polea)', 'Reverse Flies (Máquina Peck Deck)',
     'Face Pull',
-    // Otros
     'Remo al Mentón (Barra)', 'Remo al Mentón (Mancuernas)',
   ],
   'Tríceps': [
     'Catana',
-    // Polea
     'Extensión Tríceps Polea (Cuerda)', 'Extensión Tríceps Polea (Barra)', 'Extensión Tríceps Polea (V)',
     'Patada de Tríceps (Polea)', 'Patada de Tríceps (Mancuerna)',
-    // Cabeza larga
     'Press Francés (Barra)', 'Press Francés (Barra Z)', 'Press Francés (Mancuerna)',
     'Skull Crusher', 'Extensión sobre Cabeza (Mancuerna)', 'Extensión sobre Cabeza (Polea)',
-    // Press
     'Press Cerrado (Barra)', 'Press Cerrado (Mancuernas)',
-    // Fondos
     'Fondos Libres', 'Fondos Asistidos (Máquina)', 'Fondos en Máquina',
     'Fondos en Banco',
   ],
@@ -631,7 +654,6 @@ function buildDrums(cols) {
     const fb = document.createElement('div'); fb.className = 'dfb';
     const dl = document.createElement('div'); dl.className = 'dline';
     const ds = document.createElement('div'); ds.className = 'dscroll'; ds.id = 'ds-' + ci;
-    // Padding = (visible 216 / 2) - (item 44 / 2) = 86px so item 0 centers in viewport
     const p1 = document.createElement('div'); p1.style.cssText = 'height:86px;flex-shrink:0'; ds.appendChild(p1);
     col.values.forEach(v => {
       const it = document.createElement('div'); it.className = 'ditem';
@@ -644,7 +666,6 @@ function buildDrums(cols) {
     dc.appendChild(dw); dc.appendChild(du); ctr.appendChild(dc);
     pickCols.push({ values: col.values, scrollEl: ds });
     const defIdx = Math.max(0, col.values.findIndex(v => String(v) === String(col.def)));
-    // rAF ensures element is in DOM and measurable before we set scrollTop
     requestAnimationFrame(() => {
       ds.scrollTop = defIdx * DITEM_H;
       hlDrum(ds);
@@ -658,10 +679,6 @@ function buildDrums(cols) {
   });
 }
 
-// DRUM_ITEM_H = 44px, PAD_TOP = 86px, VISIBLE = 216px → center of visible = 108px
-// Item i has its midpoint at scrollOffset = PAD_TOP + i*ITEM_H + ITEM_H/2 - VISIBLE/2
-//   = 86 + i*44 + 22 - 108 = i*44
-// So the selected index = round(scrollTop / 44)  ← clean and correct
 const DITEM_H = 44;
 
 function snapDrum(ds) {
@@ -704,7 +721,7 @@ function confirmPick() {
   else if (t === 'set') {
     const reps = getDV(0), wi = getDV(1), wd = getDV(2), weight = wi + wd;
     sess.exercises[pickCtx.idx].sets.push({ reps, weight });
-    _LSW('mt_sess_bak', sess); // immediate save after each set
+    _LSW('mt_sess_bak', sess);
     renderSess();
   }
   else if (t === 'wt') {
@@ -726,9 +743,8 @@ function setDT(btnId, valId, text) {
   btn.classList.add('filled');
 }
 
-// Weight drum columns helper
 function weightCols(defKg) {
-  const defInt = Math.floor(defKg || 20), defDec = 0; // default decimal always .0
+  const defInt = Math.floor(defKg || 20), defDec = 0;
   return [
     { values: Array.from({ length: 301 }, (_, i) => i), unit: 'kg',  def: defInt, fmt: v => String(v) },
     { values: [0, 0.5],                                  unit: '.X',  def: defDec, fmt: v => v === 0 ? '.0' : '.5' },
@@ -796,7 +812,6 @@ function renderHome() {
     document.getElementById('lw-ico').textContent = tIco(last.type);
   } else sec.style.display = 'none';
 
-  // Templates in home
   const tplSec = document.getElementById('tpl-home-sec');
   const tplList = document.getElementById('tpl-home-list');
   if (templates.length) {
@@ -850,7 +865,7 @@ function tIco(t) {
 // TEMPLATES
 // ════════════════════════════════════
 let editingTplIdx = null;
-let tplSelectedExs = []; // [{name, category}] during builder
+let tplSelectedExs = [];
 
 function openNewTemplate() {
   editingTplIdx = null;
@@ -895,7 +910,7 @@ function openTplExPicker() {
   document.getElementById('ex-title').textContent = 'Seleccionar ejercicios';
   document.getElementById('ex-srch').value = '';
   document.getElementById('tplb-footer').style.display = 'block';
-  buildFChips(false); // no cardio filter restriction
+  buildFChips(false);
   renderExListMulti(ALL_EX);
   showScreen('scr-ex');
 }
@@ -934,7 +949,6 @@ function startFromTemplate(idx) {
   sessInt = setInterval(() => { sessS++; updTimer(); _LSW('mt_sess_bak', sess); }, 1000);
   startAutoSave();
   document.getElementById('sess-name').textContent = t.name;
-  // Pre-load template exercises
   t.exercises.forEach(e => {
     sess.exercises.push({ name: e.name, category: e.category, isCardio: CARDIO_EX.includes(e.name), sets: [], cardioData: {} });
   });
@@ -948,7 +962,6 @@ function startFromTemplate(idx) {
 let sess = null, sessInt = null, sessS = 0, addingEx = false, curType = null;
 
 function startW(name, type) {
-  // Check for abandoned session
   const bak = recoverSession();
   if (bak) {
     if (confirm('Tienes un entrenamiento sin terminar. ¿Recuperarlo?')) {
@@ -978,7 +991,6 @@ function openExPickerForSession(type, adding) {
   const onlyCardio = (type === 'cardio');
   buildFChips(onlyCardio, type);
   const cats = WCF[type]?.cats;
-  // If specific type (not fullbody/template/adding), filter to that type's cats
   const list = (onlyCardio)
     ? ALL_EX.filter(e => e.category === 'Cardio')
     : (!adding && cats && type !== 'fullbody')
@@ -995,9 +1007,7 @@ function closeExPicker() {
 }
 
 function buildFChips(onlyCardio, type) {
-  const wCats = WCF[type]?.cats || [];
   const cats = onlyCardio ? ['Cardio'] : ['Todos', ...Object.keys(DB)];
-  // For specific types (not fullbody/template/adding), pre-select "Todos" but it will show filtered
   document.getElementById('frow').innerHTML = cats.map((c, i) =>
     `<div class="fchip ${i === 0 ? 'on' : ''}" onclick="selCat(this,'${esc(c)}')">${c}</div>`
   ).join('');
@@ -1126,7 +1136,7 @@ function updTimer() {
   const m = Math.floor(sessS / 60).toString().padStart(2, '0');
   const s = (sessS % 60).toString().padStart(2, '0');
   document.getElementById('sess-timer').textContent = m + ':' + s;
-  sess.duration = sessS; // keep duration current
+  sess.duration = sessS;
 }
 
 function finishW() {
@@ -1151,9 +1161,37 @@ function confirmFinishW() {
   renderHome();
 }
 
+function exitWorkout() {
+  openM('m-exit');
+}
+
+function confirmExitWorkout() {
+  closeM('m-exit');
+  clearInterval(sessInt);
+  stopAutoSave();
+  sess = null; curType = null;
+  showScreen('scr-main');
+  renderHome();
+}
+
 // ════════════════════════════════════
 // HISTORY
 // ════════════════════════════════════
+let _delWIdx = null;
+function askDeleteWorkout(idx, e) {
+  e.stopPropagation();
+  _delWIdx = idx;
+  openM('m-delw');
+}
+function confirmDeleteWorkout() {
+  if (_delWIdx === null) return;
+  workouts.splice(_delWIdx, 1);
+  _delWIdx = null;
+  save();
+  closeM('m-delw');
+  renderHistory();
+  showToast('Entreno borrado');
+}
 function renderHistory() {
   const ctr = document.getElementById('hist-list');
   if (!workouts.length) { ctr.innerHTML = '<div class="empty"><div class="empty-ico">📋</div><div class="empty-ttl">Sin entrenos aún</div><div class="empty-sub">Inicia tu primer entrenamiento desde Inicio</div></div>'; return; }
@@ -1170,7 +1208,10 @@ function renderHistory() {
       h += `<div class="hcard" onclick="openHD(${oi})">
         <div class="hc-top">
           <div><div class="hc-dt">${d.toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short'})}</div><div class="hc-type">${tIco(w.type)} ${w.name}</div></div>
-          <div class="hc-time">${fmtDur(w.duration)}</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div class="hc-time">${fmtDur(w.duration)}</div>
+            <button onclick="askDeleteWorkout(${oi},event)" style="background:none;border:none;cursor:pointer;color:var(--t3);padding:4px;border-radius:7px;display:flex;align-items:center;justify-content:center;" title="Borrar"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button>
+          </div>
         </div>
         <div class="hc-stats">
           <div><div class="hstat-v">${w.exercises.length}</div><div class="hstat-l">Ejercicios</div></div>
@@ -1236,7 +1277,6 @@ function renderStats() {
   const typeCounts = {};
   workouts.forEach(w => typeCounts[w.type] = (typeCounts[w.type] || 0) + 1);
 
-  // ── Exercise progress chart (built first, inserted first) ──
   let chartSection = '';
   if (exNames.length) {
     chartSection = `<div class="scard">
@@ -1255,7 +1295,6 @@ function renderStats() {
 
   let h = `<div style="height:14px"></div>` + chartSection;
 
-  // Counters
   h += `<div class="srow2">
     <div class="smini" style="text-align:center">
       <div class="smini-v" style="font-size:38px;color:var(--ac)">${total}</div>
@@ -1267,7 +1306,6 @@ function renderStats() {
     </div>
   </div>`;
 
-  // Weight
   if (curW && stW) {
     const diff = (curW - stW).toFixed(1);
     h += `<div class="scard"><div class="sc-ttl">Peso corporal</div>
@@ -1282,13 +1320,11 @@ function renderStats() {
     </div>`;
   }
 
-  // Weekly
   h += `<div class="scard"><div class="sc-ttl">Actividad — 7 días</div>
     <div class="barchart">${wkd.map(d => `<div class="bcol"><div class="bar ${d.cnt>0?'ac':''}" style="height:${Math.max(3,Math.round(d.cnt/mxW*62))}px"></div><div class="blbl">${d.lbl}</div></div>`).join('')}
     </div>
   </div>`;
 
-  // Type distribution
   if (Object.keys(typeCounts).length) {
     h += `<div class="scard"><div class="sc-ttl">Por tipo de entreno</div>`;
     Object.entries(typeCounts).sort((a, b) => b[1] - a[1]).forEach(([type, cnt]) => {
@@ -1297,7 +1333,6 @@ function renderStats() {
     h += `</div>`;
   }
 
-  // Top exercises
   if (topEx.length) {
     h += `<div class="scard"><div class="sc-ttl">Ejercicios más entrenados</div>`;
     topEx.forEach(([nm, cnt]) => {
@@ -1306,8 +1341,8 @@ function renderStats() {
     h += `</div>`;
   }
 
-
-
+  // FIX 3: Developer credit at bottom of stats
+  h += `<div class="dev-credit" style="margin-bottom:8px">Desarrollada por <span style="color:#555">Víctor Pérez López</span></div>`;
   h += `<div style="height:8px"></div>`;
   el.innerHTML = h;
 }
@@ -1352,7 +1387,6 @@ function filterExpSuggestions() {
   const sugg = document.getElementById('expsugg');
   if (!inp || !sugg) return;
   const q = inp.value.trim().toLowerCase();
-  // Build exNames from current workouts
   const exFreq = {};
   workouts.forEach(w => w.exercises.forEach(e => { if (!e.isCardio) exFreq[e.name] = (exFreq[e.name]||0)+(e.sets?.length||0); }));
   const names = Object.keys(exFreq).sort((a,b) => a.localeCompare(b,'es'));
@@ -1389,7 +1423,7 @@ function renderProfile() {
     <div class="pst"><div class="pst-v">${curW || '—'}</div><div class="pst-l">kg</div></div>
     <div class="pst"><div class="pst-v">${bmi}</div><div class="pst-l">IMC</div></div>
   </div>
-  <div style="padding:0 20px;margin:14px 0 0;display:flex;gap:9px">
+  <div style="padding:0 24px 0 28px;margin:14px 0 0;display:flex;gap:9px">
     <button class="btn-s" style="flex:1" onclick="openWtPick()">+ Peso actual</button>
     <button class="btn-s" style="flex:1" onclick="openNewTemplate()">+ Plantilla</button>
   </div>
@@ -1404,6 +1438,8 @@ function renderProfile() {
     });
     h += `</div>`;
   }
+  // FIX 3: Developer credit in profile
+  h += `<div class="dev-credit" style="margin-top:20px;margin-bottom:4px">Desarrollada por <span style="color:#555">Víctor Pérez López</span></div>`;
   h += `<div style="height:14px"></div>`;
   document.getElementById('profile-content').innerHTML = h;
   if (ws.length > 1) setTimeout(() => drawWC(ws), 60);
@@ -1542,7 +1578,6 @@ function showToast(msg) { const t = document.getElementById('toast'); t.textCont
     showScreen('scr-main');
     document.getElementById('tab-home').style.display = 'flex';
     renderHome();
-    // Offer to recover interrupted session
     const bak = recoverSession();
     if (bak && bak.exercises?.length) {
       setTimeout(() => {
